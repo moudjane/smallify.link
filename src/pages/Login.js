@@ -9,9 +9,9 @@ export default function Login() {
                     <input className="input-form" type="email" placeholder="Enter Email" name="email" id="email" required />
                     <label className="label-form" htmlFor="psw"><b>Password: </b></label>
                     <input className="input-form" type="password" placeholder="Enter Password" name="psw" id="psw" required />
-                </div>
-                <div className="btn">
-                    <button className="larger-btn" type="submit">Login</button>
+                    <div className="btn">
+                        <button className="larger-btn" type="submit">Login</button>
+                    </div>
                 </div>
             </form>
         </div>
