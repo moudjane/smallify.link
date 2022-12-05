@@ -7,8 +7,12 @@ import { useState } from "react";
 export default function Home() {
     const [urlinput, seturlInput] = useState('')
     const [linkid, setlinkid] = useState({})
+
+    function copy() {
+
+    }
     function postdata(url) {
-        axios.post('http://localhost:8000/create', {
+        axios.post('http://localhost:5501/api/link/createlink/', {
             url: url
         })
             .then((response) => {
@@ -55,6 +59,7 @@ export default function Home() {
                     </div>
                     <div className="result">
                         <a className="result-text" rel="noreferrer" target="_blank" href={linkid.data}>{linkid.data}</a>
+                        {linkid.data ? <button onClick={navigator.clipboard.writeText(linkid.data)} className="button-copy">Copy</button> : null}
                     </div>
                 </div>
             </div>
